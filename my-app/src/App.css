@@ -1,0 +1,279 @@
+/* Global styles */
+.App {
+  text-align: center;
+}
+
+
+
+
+.App-logo {
+  height: 60px;
+  width: 120px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #f1e1e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #2e2e38;
+  color: #f6f6fa;
+  min-height: 90px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+
+.navbar-text, .navbar-link, .navbar-brand {
+  color: white;
+  font-size: 34px;
+}
+
+.nav-link:active {
+  color: #3e8e41;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+/* Home section styles */
+.home1 {
+  background-color: rgba(116, 116, 128, 0.556);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.home2 {
+  background-color: rgba(196, 196, 205, 0.692);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Text styles */
+.text1 {
+  flex: 1;
+  font-family: 'David Libre', serif; /* Specify the font */
+  text-align: justify;
+  color: #000000;
+  line-height: 1.7;
+}
+
+.text {
+  flex: 1;
+  padding: 30px;
+  font-family: 'David Libre', serif; /* Specify the font */
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Image styles */
+.img1, .img2, .img21 {
+  height: 400px;
+  width: 550px;
+  margin-left: 10px; /* Adjust margin for spacing */
+}
+
+.img12 {
+  height: 330px;
+  width: 550px;
+  margin-left: 10px; /* Adjust margin for spacing */
+}
+
+.img22 {
+  height: 390px;
+  width: 420px;
+  margin-left: 10px; /* Adjust margin for spacing */
+}
+
+/* Form styles */
+.form {
+  background-color: #c4c4cd91;
+  padding: 30px 100px;
+  margin-top: 0px;
+  margin-left: 10%;
+  margin-right: 13%;
+  border: 1px solid #bbb; /* Changed border color */
+  border-radius: 15px; /* Curved corners */
+  margin-bottom: 40px; /* Added space below form */
+}
+
+.form1 {
+  background-color: #c4c4cd91;
+  padding: 50px 100px;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 13%;
+  border: 1px solid #bbb; /* Changed border color */
+  border-radius: 15px; /* Curved corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* Added space below form */
+}
+
+.convert {
+  margin-bottom: 30px;
+}
+
+.convert1 {
+  background-color: #c4c4cd91;
+  padding: 30px 100px;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 13%;
+  border: 1px solid #bbb; /* Changed border color */
+  border-radius: 15px; /* Curved corners */
+  margin-bottom: 30px;
+}
+
+.about {
+  background-color: rgba(182, 182, 182, 0.301);
+  padding: 100px;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 13%;
+  border: 1px solid #bbb; /* Changed border color */
+  border-radius: 15px; /* Curved corners */
+  margin-bottom: 40px; /* Added space below form */
+}
+
+/* Button styles */
+.btn {
+  border: 1px solid;
+}
+
+.btn-custom {
+  background-color: #7474809f; /* Primary color */
+  color: #ffffff; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  margin: 10px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn-custom:hover {
+  background-color: #747480; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn-custom:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.btn-custom:active {
+  background-color: #747480; /* Even darker shade on click */
+}
+
+/* Radio button styles */
+.radio {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the spacing between options if needed */
+}
+
+/* Form label styles */
+.form-label {
+  margin-bottom: 8px; /* Space between label and input */
+  font-weight: normal; /* Remove boldness */
+}
+
+/* Select and form control styles */
+.form-select, .form-control {
+  margin-bottom: 15px; /* Space between form controls */
+  width: 100%; /* Full width for select elements */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .form1 {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+/* Inputform.css */
+
+.form .form-control.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  display: block;
+  margin-top: 0.25em;
+}
+
+
+
+/* Footer.css */
+.footer {
+  background-color: #2e2e38;
+  color: #f6f6fa;
+  padding: 20px 0 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right a {
+  color: #f6f6fa;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.footer-right a:hover {
+  color: white;
+}
+.footer-logo {
+  width: 70px;  /* Adjust the size as needed */
+  height: 40px;
+  margin-right: 20px; /* Optional: Add some space between the logo and the text */
+}
