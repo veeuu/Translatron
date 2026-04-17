@@ -21,7 +21,7 @@ export default function Toconvert(props) {
     setInputText(event.target.value);
     if (event.target.value) {
       try {
-        const response = await axios.post('http://127.0.0.1:5000/translate', {
+        const response = await axios.post('http://127.0.0.1:8000/translate', {
           text: event.target.value,
           src_lang: props.fromLang,
           dest_lang: props.toLang,
@@ -51,7 +51,7 @@ export default function Toconvert(props) {
       formData.append('dest_lang', props.toLang);
   
       try {
-        const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
+        const response = await axios.post('http://127.0.0.1:8000/upload/pdf-translate', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

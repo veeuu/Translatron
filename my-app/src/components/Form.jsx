@@ -169,7 +169,7 @@ const languageOptions = [
         setSourceLang(lang);
         if (targetLang) {
             try {
-                const response = await axios.get(`http://127.0.0.1:5001/translateLabels?lang=${lang}`);
+                const response = await axios.get(`http://127.0.0.1:8000/translateLabels?lang=${lang}`);
                 setTranslatedLabels(response.data);
                 if (mode === 'formfilling') {
                     setFormVisible(true); // Show the form after both languages are selected
@@ -203,7 +203,7 @@ const languageOptions = [
         formData.append('targetLang', targetLang);
 
         try {
-            await axios.post('http://127.0.0.1:5001/upload', formData, {
+            await axios.post('http://127.0.0.1:8000/upload/pdf-fields', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setFormVisible(true); // Show the form after the file is successfully processed

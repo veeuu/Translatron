@@ -30,7 +30,7 @@ export default function Format(props) {
       formData.append('toLang', props.toLang);
   
       try {
-        const response = await axios.post('http://127.0.0.1:5002/upload', formData, {
+        const response = await axios.post('http://127.0.0.1:8000/upload/pdf-chat', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

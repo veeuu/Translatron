@@ -30,7 +30,7 @@ export default function Translatedform(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/getTranslatedData/${props.objid}`)
+        const response = await axios.get(`http://127.0.0.1:8000/getTranslatedData/${props.objid}`)
         console.log('Fetched data:', response.data);
         const fetchedData = response.data.translated_data || {};
         setData({

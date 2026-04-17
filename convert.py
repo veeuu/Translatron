@@ -14,11 +14,10 @@ from hugchat.login import Login
 import re
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend-backend communication
-
+CORS(app) 
 # HugChat credentials
-EMAIL = ""  # Replace with your email
-PASSWD = ""  # Replace with your password
+EMAIL = "veeekamble@gmail.com"  # Replace with your email
+PASSWD = "^=Xr!(bNCRt5.pq"  # Replace with your password
 cookie_path_dir = "./cookies/"
 
 # Initialize HugChat client

@@ -82,7 +82,7 @@ export default function Inputform(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:5001/submitForm', { ...formData, sourceLang: props.sourceLang, targetLang: props.targetLang })
+    axios.post('http://127.0.0.1:8000/submitForm', { ...formData, sourceLang: props.sourceLang, targetLang: props.targetLang })
       .then(response => {
         const receivedObjectId = response.data.objectId;
         console.log('Received ObjectId:', receivedObjectId);
@@ -96,7 +96,7 @@ export default function Inputform(props) {
 
   useEffect(() => {
     if (objectId) {
-      axios.get(`http://127.0.0.1:5001/getTranslatedData/${objectId}`)
+      axios.get(`http://127.0.0.1:8000/getTranslatedData/${objectId}`)
         .then(response => {
           setTranslatedData(response.data.translatedData);
           alert('Data saved successfully!');
