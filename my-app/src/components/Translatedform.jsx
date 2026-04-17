@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 
 export default function Translatedform(props) {
   // Initialize state with default values to avoid uncontrolled inputs
@@ -30,7 +31,7 @@ export default function Translatedform(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/getTranslatedData/${props.objid}`)
+        const response = await axios.get(`${API_BASE_URL}/getTranslatedData/${props.objid}`)
         console.log('Fetched data:', response.data);
         const fetchedData = response.data.translated_data || {};
         setData({

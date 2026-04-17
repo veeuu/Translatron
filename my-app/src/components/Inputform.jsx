@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import Translatedform from './Translatedform';
 
 export default function Inputform(props) {
@@ -82,7 +83,7 @@ export default function Inputform(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:8000/submitForm', { ...formData, sourceLang: props.sourceLang, targetLang: props.targetLang })
+    axios.post(`${API_BASE_URL}/submitForm`, { ...formData, sourceLang: props.sourceLang, targetLang: props.targetLang })
       .then(response => {
         const receivedObjectId = response.data.objectId;
         console.log('Received ObjectId:', receivedObjectId);
@@ -96,7 +97,7 @@ export default function Inputform(props) {
 
   useEffect(() => {
     if (objectId) {
-      axios.get(`http://127.0.0.1:8000/getTranslatedData/${objectId}`)
+      axios.get(`${API_BASE_URL}/getTranslatedData/${objectId}`)
         .then(response => {
           setTranslatedData(response.data.translatedData);
           alert('Data saved successfully!');

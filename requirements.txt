@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pymongo
+deep-translator
+PyMuPDF
+PyPDF2
+reportlab
+hugchat
+pydantic
+python-multipart

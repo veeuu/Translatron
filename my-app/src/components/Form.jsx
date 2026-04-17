@@ -3,6 +3,7 @@ import Inputform from './Inputform';
 import '../App.css';
 import Select from 'react-select';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 
 const modeOptions = [
   { value: 'formfilling', label: 'Form Filling' },
@@ -169,7 +170,7 @@ const languageOptions = [
         setSourceLang(lang);
         if (targetLang) {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/translateLabels?lang=${lang}`);
+                const response = await axios.get(`${API_BASE_URL}/translateLabels?lang=${lang}`);
                 setTranslatedLabels(response.data);
                 if (mode === 'formfilling') {
                     setFormVisible(true); // Show the form after both languages are selected
@@ -203,7 +204,7 @@ const languageOptions = [
         formData.append('targetLang', targetLang);
 
         try {
-            await axios.post('http://127.0.0.1:8000/upload/pdf-fields', formData, {
+            await axios.post(`${API_BASE_URL}/upload/pdf-fields`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setFormVisible(true); // Show the form after the file is successfully processed
