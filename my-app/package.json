@@ -23,5 +23,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://veeuu.github.io/translatron"
+  "homepage": "https://veeuu.github.io/Translatron"
 }
